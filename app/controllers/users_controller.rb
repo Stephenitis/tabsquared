@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
 
-  before_action [:show, :edit, :update]
-
   def show
   end
 

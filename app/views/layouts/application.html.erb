@@ -8,6 +8,18 @@
 </head>
 <body>
 
+  <div id="top-nav">
+      <div id="brand">
+        <span>TabSquared</span>
+      </div>
+      <div id="sign-in-sign-out">
+      <% if current_user %>
+        <%= link_to "Sign Out", session_path, method: :delete %>
+      <% else %>
+        <%= link_to image_tag("https://playfoursquare.s3.amazonaws.com/press/logo/connect-blue.png"), "/auth/foursquare" %>
+      <% end %>
+    </div>
+  </div>
 <%= yield %>
 
 </body>
