@@ -3,7 +3,7 @@
 
   <%= form_for current_user do |f| %>
     <%= f.label :phone_number %>:
-    <%= f.phone_field :phone_number, placeholder: "555-55-5555", pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}", required: true, id: "phone-input" %>
+    <%= f.phone_field :phone_number, placeholder: "555-555-5555", pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}", required: true, id: "phone-input" %>
 
     <%= f.submit %>
   <% end %>
