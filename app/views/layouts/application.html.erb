@@ -3,21 +3,22 @@
 <head>
   <title>Tabsquared</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
   <div id="top-nav">
-      <div id="brand">
-        <span>TabSquared</span>
-      </div>
-      <div id="sign-in-sign-out">
-      <% if current_user %>
-        <%= link_to "Sign Out", session_path, method: :delete %>
-      <% else %>
-        <%= link_to image_tag("https://playfoursquare.s3.amazonaws.com/press/logo/connect-blue.png"), "/auth/foursquare" %>
-      <% end %>
+    <div id="brand">
+      <span>TabSquared</span>
+    </div>
+    <div id="sign-in-sign-out">
+    <% if current_user %>
+      <%= link_to "Sign Out", session_path, method: :delete %>
+    <% else %>
+      <%= link_to image_tag("https://playfoursquare.s3.amazonaws.com/press/logo/connect-blue.png"), "/auth/foursquare" %>
+    <% end %>
     </div>
   </div>
 <%= yield %>
