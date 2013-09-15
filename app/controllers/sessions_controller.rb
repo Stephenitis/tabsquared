@@ -3,7 +3,11 @@ class SessionsController < ApplicationController
     @user = User.find_or_create_from_auth_hash(auth_hash)
     session[:user_id] = @user.id
 
-    redirect_to '/'
+    if @user.phone_number
+      redirect_to user_path @user
+    else
+      redirect_to edit_user_path @user
+    end
   end
 
   protected
