@@ -3,8 +3,10 @@
 <head>
   <title>Tabsquared</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
   <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,700' rel='stylesheet' type='text/css'>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -18,11 +20,12 @@
     <% if current_user %>
       <%= link_to "Sign Out", signout_path, method: :delete %>
     <% else %>
-      <%= link_to image_tag("https://playfoursquare.s3.amazonaws.com/press/logo/connect-blue.png"), "/auth/foursquare" %>
+      <%= link_to image_tag("https://playfoursquare.s3.amazonaws.com/press/logo/connect-blue.png"), "/auth/foursquare", id: "foursquare-button" %>
     <% end %>
     </div>
   </div>
 <%= yield %>
 
+  <%= image_tag 'ajax-loader.gif', id: "spinner" %>
 </body>
 </html>
