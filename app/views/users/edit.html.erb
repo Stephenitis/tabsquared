@@ -1,0 +1,8 @@
+Please enter the phone number that you wish to receive notifications with.
+
+<%= form_for current_user do |f| %>
+  <%= f.label :phone_number %>:
+  <%= f.text_field :phone_number %>
+
+  <%= f.submit %>
+<% end %>

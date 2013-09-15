@@ -13,7 +13,6 @@ gem 'foreman'
 gem 'omniauth-foursquare'
 gem 'httparty'
 
-
 group :doc do
   gem 'sdoc', require: false
 end
