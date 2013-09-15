@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     verification_code = (1000 + rand(8999)).to_s
     params[:user][:verification_code] = verification_code
     current_user.update(user_params)
+    puts
     twilio_client = Twilio::REST::Client.new ENV["TWILIO_SID"], ENV["TWILIO_TOKEN"]
     twilio_client.account.sms.messages.create(
       body: "Hello from TabSquared! Your verification code is #{verification_code}",
