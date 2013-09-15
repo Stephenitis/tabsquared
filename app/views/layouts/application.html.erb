@@ -18,11 +18,12 @@
     <% if current_user %>
       <%= link_to "Sign Out", session_path, method: :delete %>
     <% else %>
-      <%= link_to image_tag("https://playfoursquare.s3.amazonaws.com/press/logo/connect-blue.png"), "/auth/foursquare" %>
+      <%= link_to image_tag("https://playfoursquare.s3.amazonaws.com/press/logo/connect-blue.png"), "/auth/foursquare", id: "foursquare-button" %>
     <% end %>
     </div>
   </div>
 <%= yield %>
 
+  <%= image_tag 'ajax-loader.gif', id: "spinner" %>
 </body>
 </html>
