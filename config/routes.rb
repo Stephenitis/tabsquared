@@ -1,5 +1,6 @@
 Tabsquared::Application.routes.draw do
 
+  get "sessions/create"
   root 'welcome#index'
 
   get '/auth/foursquare/callback', to: 'sessions#create'
