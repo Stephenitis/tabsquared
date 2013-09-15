@@ -2,6 +2,6 @@
 $(document).ready(function() {
   return $('#foursquare-button').click(function(e) {
     $(this).html($('#spinner'));
-    return console.log($('#spinner').toggle());
+    return $('#spinner').toggle();
   });
 });

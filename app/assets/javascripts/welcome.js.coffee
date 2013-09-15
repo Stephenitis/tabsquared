@@ -5,5 +5,5 @@
 $(document).ready ->
   $('#foursquare-button').click (e) ->
     $(this).html $('#spinner')
-    console.log $('#spinner').toggle()
+    $('#spinner').toggle()
 
