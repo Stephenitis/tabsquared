@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  has_many :venues
+  
   def self.find_or_create_from_auth_hash(auth_hash)
     uid = auth_hash["uid"]
 
