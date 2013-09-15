@@ -1,8 +1,10 @@
-Please enter the phone number that you wish to receive notifications with.
+<div class="container">
+  <p>Please enter the phone number that you wish to receive notifications with.</p>
 
-<%= form_for current_user do |f| %>
-  <%= f.label :phone_number %>:
-  <%= f.text_field :phone_number %>
+  <%= form_for current_user do |f| %>
+    <%= f.label :phone_number %>:
+    <%= f.text_field :phone_number %>
 
-  <%= f.submit %>
-<% end %>
+    <%= f.submit %>
+  <% end %>
+</div>
