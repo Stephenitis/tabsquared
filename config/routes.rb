@@ -9,4 +9,6 @@ Tabsquared::Application.routes.draw do
 
   post '/listener', to: 'command#listener'
 
+  post '/test', to: 'command#test'
+
 end
