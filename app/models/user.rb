@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
 
     where(uid: uid).first_or_initialize.tap do |user|
       user.uid = uid
+      user.first_name = auth_hash["info"]["first_name"]
+      user.last_name = auth_hash["info"]["last_name"]
       user.oauth_token = auth_hash["credentials"]["token"]
       user.save!
     end
