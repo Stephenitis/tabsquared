@@ -1,0 +1,10 @@
+<div class="container">
+	<% if flash[:error] %>
+		<div class="alert alert-danger"><%= flash[:error] %></div>
+	<% end %>
+	<%= form_tag(verify_path) do %>
+		<%= label_tag "Enter verification code here:" %>
+		<%= text_field_tag :given_code %>
+		<%= submit_tag "Verify" %>
+	<% end %>
+</div>
