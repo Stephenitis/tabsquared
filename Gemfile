@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'twilio-ruby'
 gem 'foreman'
 gem 'omniauth-foursquare'
+gem 'httparty'
 
 
 group :doc do
