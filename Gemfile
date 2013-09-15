@@ -12,6 +12,7 @@ gem 'twilio-ruby'
 gem 'foreman'
 gem 'omniauth-foursquare'
 gem 'httparty'
+gem 'foursquare2'
 
 group :doc do
   gem 'sdoc', require: false
