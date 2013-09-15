@@ -1,1 +1,26 @@
 <div id="landing-background"></div>
+
+
+<div class="jumbotron">
+    <h1>Manage a Foursquare Location?</h1>
+    <p>Get realtime push notifications for checkins at your venues and react accordingly!</p>
+ 
+    
+    <% if current_user %>
+      <%= link_to "Sign Out", session_path, method: :delete %>
+    <% else %>
+    <p> <%= link_to "Connect with Foursquare", "/auth/foursquare", { class: "btn btn-primary btn-lg"} %></p>
+    <% end %>
+
+    <small>Your account must have Manager privileges to sign up</small>
+    <small>find out how <strong><a href="http://support.foursquare.com/entries/21376233-Claim-Your-Business-On-Foursquare"> here</a></strong></small>
+  </div>
+</div>
+<footer>
+    <strong><center>powered by </center></strong>
+	<%=image_tag("foursquare.png", width: '170',) %>
+	<%= image_tag("twilio.png", width: '150',) %>
+	<%= image_tag("iron.png", width: '140',) %>
+	<%# image_tag("rails.png", width: '50',) %>
+	<%# image_tag("ruby.png", width: '50',) %>
+</footer>

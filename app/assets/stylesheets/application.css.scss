@@ -14,9 +14,9 @@
 
 body {
   padding-top: 70px;
-}
+// }
 
-#landing-background {
+// #landing-background {
   position: fixed;
   z-index: -9999;
   top: 0;
@@ -70,4 +70,8 @@ body {
 
 #spinner {
   display: none;
+}
+
+footer{
+  text-align: center;
 }
