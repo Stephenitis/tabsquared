@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
       user.oauth_token = auth_hash["credentials"]["token"]
       client = Foursquare2::Client.new(:oauth_token => user.oauth_token)
       client.managed_venues['items'].each do |venue| 
-        user.venues << Venue.create(venue_id: venue.id)
+        user.venues << Venue.first_or_create(venue_id: venue.id)
       end
       user.save!
     end
