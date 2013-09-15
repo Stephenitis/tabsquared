@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'twilio-ruby'
 gem 'foreman'
 gem 'omniauth-foursquare'
+gem 'httparty'
 
 group :doc do
   gem 'sdoc', require: false
@@ -20,6 +21,10 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
+end
+
+group :production do 
+	gem 'rails_12factor'
 end
 
 
