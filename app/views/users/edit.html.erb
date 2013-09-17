@@ -1,14 +1,12 @@
 <div id="landing-background">
-
-
 	<div class="jumbotron">
 		<p>Please enter the phone number that you wish to receive notifications with.</p>
-
 		<%= form_for current_user do |f| %>
 		<%= f.label :phone_number %>:
-		<%= f.phone_field :phone_number, placeholder: "555-555-5555", pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}", required: true, id: "phone-input" %>
-
-		<%= f.submit %>
+		<%= f.phone_field :phone_number, placeholder: "123-456-7890 or 1234567890 ", type: "tele" pattern: "([0-9]{3}-[0-9]{3}-[0-9]{4})|1*\d{10}", maxlength: 10, autofocus: "autofocus" required: true, id: "phone-input" %>
+    <small>only US zipcodes supported currently</small>
+		<%= f.submit, :class => "btn btn-primary", :value => "Send Me Verification Number" %>
 		<% end %>
+        <%= image_tag "verification.png" %>
 	</div>
 </div>
