@@ -14,9 +14,11 @@
 
 body {
   padding-top: 70px;
-// }
+}
 
-// #landing-background {
+#landing-background {
+  padding-top: 70px;
+  
   position: fixed;
   z-index: -9999;
   top: 0;
@@ -25,7 +27,7 @@ body {
   min-height: 800px;
   background-color: black;
   background: url('background.jpg') no-repeat center center fixed;
-  // background: asset-url('background.jpg', image) no-repeat center center fixed;
+  background: asset-url('background.jpg', image) no-repeat center center fixed;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
