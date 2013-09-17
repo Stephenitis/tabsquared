@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def verify
     if params[:given_code] == current_user.verification_code
+      current_user.update(verified: true)
       redirect_to user_path current_user
     else
       flash[:error] = "Your number did not pass verification..."
