@@ -3,6 +3,8 @@ class WelcomeController < ApplicationController
 	before_filter :check_logged_in
   def index
   end
+  def about
+  end
   def check_logged_in
   	redirect_to (current_user) if current_user
   end

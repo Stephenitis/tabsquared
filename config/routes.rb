@@ -15,4 +15,6 @@ Tabsquared::Application.routes.draw do
 
   post '/verify', to: 'users#verify'
 
+  get '/about', to: 'welcome#about'
+
 end
