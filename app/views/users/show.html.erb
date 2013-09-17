@@ -3,6 +3,9 @@
 
 	<div class="jumbotron">
     <div class="container">
+        <% if current_user %>
+      <%= link_to "Sign Out", signout_path, method: :delete %>
+      <% end %>
 		<h2>You're all set <span class="text-primary"> <%= "#{current_user.first_name.titleize}" %></span></h2>
 
     <h3>Realtime pushes will be sent to</h3>
