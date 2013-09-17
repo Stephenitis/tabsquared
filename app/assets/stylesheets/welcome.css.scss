@@ -2,24 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-  //   position: fixed;
-//   z-index: -9999;
-  min-width: 100%;
-  // min-height: 1000px;
-  padding-top: 50px;
-  background: url('background.jpg') no-repeat center center fixed;
+html{
+  // background: url('background.jpg') no-repeat center center fixed;
   background: asset-url('background.jpg', image) no-repeat center center fixed;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
           background-size:cover;
-  
+    padding-top: 50px;
+          
+}
+
+body{
+  background-color: rgba(0, 0, 0, 0);
+    // padding-top: 50px;
 }
 .jumbotron{
 	text-align: center;
   color:rgb(214,214,214);
   background-color: rgba(0, 0, 0, 0.6);
+  // opacity: 0.2;
 }
 
 footer{
