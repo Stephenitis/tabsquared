@@ -13,6 +13,7 @@ gem 'foreman'
 gem 'omniauth-foursquare'
 gem 'httparty'
 gem 'foursquare2'
+gem 'newrelic_rpm'
 
 group :doc do
   gem 'sdoc', require: false
