@@ -10,7 +10,7 @@ before_filter :verify_logged_in
   def update
     @user = current_user
     if @user.verified
-      @user.update(user_params)
+      @user.update(notifications: params[:user][:notifications])
       flash[:alert] = "update successful"
       render :show
     else

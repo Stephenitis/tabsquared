@@ -10,8 +10,8 @@
     <%="#{number_to_phone(current_user.phone_number, area_code: true)}"  %>
     </h2>
         <%= form_for current_user do |f| %>
-        <%= f.label "notifications on/off" %>
-        <%= f.check_box :notifications, checked_value: "1", unchecked_value: "0" %><br>
+        <%= f.label "notifications" %>
+        <%= f.check_box :notifications %><br>
         <%= f.submit value:"save", :class => "btn btn-success" %>
         <% end  %>
 
