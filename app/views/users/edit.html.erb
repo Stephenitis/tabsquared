@@ -6,7 +6,7 @@
 		<%= f.phone_field :phone_number, placeholder: "123-456-7890 or 123456789", pattern: '([0-9]{3}-[0-9]{3}-[0-9]{4})|1*\d{10}', autofocus: "autofocus", required: true, id: "phone-input" %>
 		<%= f.submit :class => "btn btn-primary", :value => "Send Me Verification Number" %>
     <br>
-    <small>only US zipcodes supported currently</small>
+    <small>only US area codes supported currently</small>
 		<% end %>
 	</div>
 </div>
