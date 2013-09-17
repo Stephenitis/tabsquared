@@ -3,8 +3,8 @@
 
 	<div class="jumbotron">
     <div class="container">
-		<h2>You're all set</h2>
-        <h2 class="text-primary"> <%= "#{current_user.first_name.titleize}" %></h2>
+		<h2>You're all set <span class="text-primary"> <%= "#{current_user.first_name.titleize}" %></span></h2>
+
     <h3>Realtime pushes will be sent to</h3>
     <h2 class="text-primary">
     <%="#{number_to_phone(current_user.phone_number, area_code: true)}"  %>

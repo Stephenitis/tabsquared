@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   has_and_belongs_to_many :venues
+
+  after_create :find_venues
   
   def self.find_or_create_from_auth_hash(auth_hash)
     uid = auth_hash["uid"]
@@ -8,10 +10,6 @@ class User < ActiveRecord::Base
       user.first_name = auth_hash["info"]["first_name"]
       user.last_name = auth_hash["info"]["last_name"]
       user.oauth_token = auth_hash["credentials"]["token"]
-      client = Foursquare2::Client.new(:oauth_token => user.oauth_token)
-      client.managed_venues['items'].each do |venue| 
-        user.venues << Venue.first_or_create(venue_id: venue.id)
-      end
       user.save!
     end
   end
@@ -25,5 +23,10 @@ class User < ActiveRecord::Base
       from: "#{ENV["TWILIO_NUMBER"]}")
   end
 
-
+  def find_venues
+    client = Foursquare2::Client.new(:oauth_token => self.oauth_token)
+    client.managed_venues['items'].each do |venue| 
+      self.venues << Venue.first_or_create(venue_id: venue.id)
+    end
+  end
 end
