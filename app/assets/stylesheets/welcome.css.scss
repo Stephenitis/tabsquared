@@ -1,6 +1,21 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  //   position: fixed;
+//   z-index: -9999;
+  min-width: 100%;
+  // min-height: 1000px;
+  padding-top: 50px;
+  background: url('background.jpg') no-repeat center center fixed;
+  background: asset-url('background.jpg', image) no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size:cover;
+  
+}
 .jumbotron{
 	text-align: center;
   color:rgb(214,214,214);
@@ -14,4 +29,11 @@ footer{
    width:100%;
    padding: 0 0 10px 0;
   color:white
+}
+#spinner {
+  display: none;
+}
+
+footer{
+  text-align: center;
 }

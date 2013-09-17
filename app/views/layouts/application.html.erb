@@ -12,17 +12,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<!--   <div id="top-nav">
-    <div id="brand">
-      <span>TabSquared</span>
-    </div>
-<<<<<<< HEAD
-    
-  </div> -->
-
 <%= yield %>
-
   <%= image_tag 'ajax-loader.gif', id: "spinner" %>
+
+  <footer>
+    <strong><center>powered by </center></strong>
+    <%=image_tag("foursquare.png", width: '170',) %>
+    <%= image_tag("twilio.png", width: '150',) %>
+    <%= image_tag("iron.png", width: '140') %>
+    <%# image_tag("rails.png", width: '50',) %>
+    <%# image_tag("ruby.png", width: '50',) %>
+</footer>
 </body>
 </html>

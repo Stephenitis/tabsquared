@@ -1,75 +1,71 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+// /*
+//  * This is a manifest file that'll be compiled into application.css, which will include all the files
+//  * listed below.
+//  *
+//  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+//  * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+//  *
+//  * You're free to add application-wide styles to this file and they'll appear at the top of the
+//  * compiled file, but it's generally better to create a new file per style scope.
+//  *
+//  *= require_self
+//  *= require_tree .
+//  */
 
-body {
-  // padding-top: 70px;
-}
+// body {
+//   // padding-top: 70px;
+//   padding-top: 70px;
+//   position: fixed;
+//   z-index: -9999;
+//   // min-width: 100%;
+//   // min-height: 800px;
+//   background-color: black;
+//   background: url('background.jpg') no-repeat center center fixed;
+//   // background: asset-url('background.jpg', image) no-repeat center center fixed;
+//           -webkit-background-size: cover;
+//           -moz-background-size: cover;
+//           -o-background-size: cover;
+//           background-size: cover;
+// }
 
-#landing-background {
-  padding-top: 70px;
+// #top-nav {
+//   position: fixed;
+//   background-color: rgba(0,0,0,0.5);
+//   width: 100%;
+//   height: 50px;
+//   top: 0;
+//   left: 0;
+// }
 
-  position: fixed;
-  z-index: -9999;
-  min-width: 100%;
-  min-height: 800px;
-  background-color: black;
-  background: url('background.jpg') no-repeat center center fixed;
-  background: asset-url('background.jpg', image) no-repeat center center fixed;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-}
+// #brand {
+//   color: #fff;
+//   float: left;
+//   padding-left: 10px;
+//   line-height: 50px;
+//   height: 50px;
+//   font-size: 32px;
+//   font-family: 'Metrophobic', sans-serif;
+// }
 
-#top-nav {
-  position: fixed;
-  background-color: rgba(0,0,0,0.5);
-  width: 100%;
-  height: 50px;
-  top: 0;
-  left: 0;
-}
+// #sign-in-sign-out {
+//   float: right;
+//   padding-right: 10px;
+//   line-height: 50px;
 
-#brand {
-  color: #fff;
-  float: left;
-  padding-left: 10px;
-  line-height: 50px;
-  height: 50px;
-  font-size: 32px;
-  font-family: 'Metrophobic', sans-serif;
-}
+//   img {
+//     vertical-align: middle;
+//   }
 
-#sign-in-sign-out {
-  float: right;
-  padding-right: 10px;
-  line-height: 50px;
+//   a {
+//     color: #fff;
+//     text-decoration: none;
+//   }
+// }
 
-  img {
-    vertical-align: middle;
-  }
-
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-}
-
-.container {
-  text-align: center;
-  color: white;
-}
+// // .container {
+// //   text-align: center;
+// //   color: white;
+// // }
 
 #spinner {
   display: none;
