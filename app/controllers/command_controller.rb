@@ -3,17 +3,8 @@ class CommandController < ApplicationController
 
 	def listener		
     checkin = decode_foursquare_push(request)
-    p "checkin"
-    p checkin
-    p "8" *99
-
 		managers = find_managers(checkin)
-    p "8" *99
-
-    p managers
-		checkin[:phone] = managers.select { |manager| manager.notifications }.map { |manager| manager.phone_number}
-    p "8" *99
-    p checkin
+		checkin[:phone] = managers.select { |manager| manager.notifications && manager.verified }.map { |manager| manager.phone_number}
     send_to_worker(checkin) if checkin[:phone].any?
 		render nothing: true
 	end
