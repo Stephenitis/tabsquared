@@ -16,6 +16,7 @@ gem 'omniauth-foursquare'
 gem 'httparty'
 gem 'foursquare2'
 gem 'newrelic_rpm'
+gem 'quiet_assets'
 
 group :doc do
   gem 'sdoc', require: false

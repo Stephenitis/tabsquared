@@ -1,11 +1,12 @@
 class CommandController < ApplicationController
 	skip_before_filter :verify_authenticity_token
 
-	def listener
+	def listener		
     checkin = decode_foursquare_push(request)
 		managers = find_managers(checkin)
-    #this will map a phone number only if they have notifications turned on
+    #this will map a phone number only if they have notifications turned
 		checkin[:phone] = managers.select { |manager| manager.notifications }.map { |manager| manager.phone_number}
+    p checkin
     send_to_worker(checkin) if checkin[:phone].any?
 		render nothing: true
 	end
