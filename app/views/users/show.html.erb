@@ -2,9 +2,11 @@
 	<div class="jumbotron">
     <div class="container">
         <% if current_user %>
-      <%= link_to "Sign Out", signout_path, method: :delete %>
+      <%= link_to "Sign Out", signout_path, method: :delete, :class => "btn btn-danger pull-right" %>
       <% end %>
-		<h2>You're all set <span class="text-primary"> <%= "#{current_user.first_name.titleize}" %></span></h2>
+      <br>
+		<h3>You're all set</h3>
+    <span> <%= "#{current_user.first_name.titleize}" %></span>
 
     <h3>Realtime pushes will be sent to</h3>
     <h2 class="text-primary">
@@ -12,7 +14,7 @@
     </h2>
         <%= form_for current_user do |f| %>
         <%= f.label "notifications" %>
-        <%= f.check_box :notifications %><br>
+        <%= f.check_box :notifications %>
         <%= f.submit value:"save", :class => "btn btn-success" %>
         <% end  %>
 

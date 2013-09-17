@@ -1,13 +1,12 @@
-<div id="landing-background">
+<!-- <div id="landing-background"> -->
   <div class="jumbotron">
     <% if flash[:error] %>
     <div class="alert alert-danger"><%= flash[:error] %></div>
     <% end %>
     <%= form_tag(verify_path) do %>
-    <%= label_tag "Enter verification code here:" %>
-    <%= text_field_tag :given_code %>
+    <%= label_tag "Enter verification code" %><br>
+    <%= text_field_tag :given_code, "" ,{placeholder: "ex:0000"} %><br>
     <%= submit_tag "Verify", :class => "btn btn-primary", :value => "Submit  Verfication" %>
     <% end %>
-    <%= image_tag "verification.png" %>
   </div>
-</div>
+<!-- </div> -->
