@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
       user.first_name = auth_hash["info"]["first_name"]
       user.last_name = auth_hash["info"]["last_name"]
       user.oauth_token = auth_hash["credentials"]["token"]
+      user.save!
     end
-    user.save!
   end
 
   def send_verification_code
@@ -29,6 +29,4 @@ class User < ActiveRecord::Base
       self.venues << Venue.first_or_create(venue_id: venue.id)
     end
   end
-
-
 end
