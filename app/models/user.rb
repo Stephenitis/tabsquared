@@ -18,10 +18,7 @@ class User < ActiveRecord::Base
 
   def send_verification_code
     self.update(verification_code: (1000 + rand(8999)).to_s)
-    p self
     twilio_client = Twilio::REST::Client.new ENV["TWILIO_SID"], ENV["TWILIO_TOKEN"]
-    p self.verification_code
-    p self.phone_number
     twilio_client.account.sms.messages.create(
       body: "TabSquared Verification Number is #{self.verification_code}",
       to: "+1#{self.phone_number}",

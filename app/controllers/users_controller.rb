@@ -13,10 +13,9 @@ class UsersController < ApplicationController
       flash[:alert] = "update successful"
       render :show
     else
-      if @user.update(user_params)
-        @user.send_verification_code
-        render :verify_number
-      end
+      @user.update(user_params)
+      @user.send_verification_code
+      render :verify_number
     end
   end
 
