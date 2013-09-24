@@ -1,4 +1,6 @@
-== README
+### README
+
+![tabsquared screenshot](http://i.imgur.com/bdOVDFk.png "Screenshot")
 
 This app uses foreman
 please make sure you replace all environment variables in the .env file
@@ -14,10 +16,10 @@ console with env variables
     rake db:create
     rake db:migrate
 
-there is no seed
 
 
-IRON WORKERS
+
+### IRON WORKERS
 
 workers are located in the app/workers director
 
@@ -46,4 +48,5 @@ get the webhook url
         https://worker-aws-us-east-1.iron.io:443/2/projects/0000000000000/tasks/webhook?code_name=foursquare-api.&oauth=0000000000000-0000000000000
 
 place it in the environment .env file as 
+
     WORKER_WEBHOOK_URL= https://worker-aws-us-east-1.iron.io:443/2/projects/0000000000000/tasks/webhook?code_name=foursquare-api.&oauth=0000000000000-0000000000000
