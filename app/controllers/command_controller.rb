@@ -5,6 +5,11 @@ class CommandController < ApplicationController
     checkin = decode_foursquare_push(request)
 		managers = find_managers(checkin)
 		checkin[:phone] = managers.select { |manager| manager.notifications && manager.verified }.map { |manager| manager.phone_number}
+    checkin[:TWILIO_SID] = ENV["TWILIO_SID"]
+    checkin[:TWILIO_TOKEN] = ENV["TWILIO_TOKEN"]
+    checkin[:TWILIO_NUMBER] = ENV["TWILIO_NUMBER"]
+    checkin[:FOURSQUARE_CLIENT_ID] = ENV["FOURSQUARE_CLIENT_ID"]
+    checkin[:FOURSQUARE_CLIENT_SECRET] = ENV["FOURSQUARE_CLIENT_SECRET"]
     send_to_worker(checkin) if checkin[:phone].any?
 		render nothing: true
 	end

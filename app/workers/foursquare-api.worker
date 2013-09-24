@@ -1,0 +1,7 @@
+runtime "ruby"
+
+gem 'foursquare2'
+gem 'twilio-ruby'
+
+
+exec "foursquare-api.rb"
